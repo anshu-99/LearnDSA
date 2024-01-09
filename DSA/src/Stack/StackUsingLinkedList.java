@@ -1,5 +1,5 @@
 package Stack;
-
+import java.util.Scanner;
 public class StackUsingLinkedList {
 //    LIFO (Last in First Out)
 //    PUSH (Add data on top with O(1) )
@@ -23,6 +23,7 @@ public class StackUsingLinkedList {
             Node newNode= new Node(data);
             if(isEmpty()){
                 head=newNode;
+                return;
             }
             newNode.next=head;
             head= newNode;
@@ -39,12 +40,18 @@ public class StackUsingLinkedList {
             if(isEmpty()){
                 return -1;
             }
-            int top=head.data;
-            return top;
+            return head.data;
         }
     }
 
     public static void main(String[] args) {
-
+        Scanner sc= new Scanner(System.in);
+        for(int i=2;i<=30;i+=2){
+            Stack.push(i);
+        }
+        while(!Stack.isEmpty()){
+            System.out.println(Stack.peek());
+            Stack.pop();
+        }
     }
 }
