@@ -3,22 +3,21 @@ package Stack;
 import java.util.ArrayList;
 
 public class StackArrayList {
-    class Stack{
+    static class Stack{
         static ArrayList<Integer> stackElement=new ArrayList<>();
 
         public static boolean isEmpty(){
-            return stackElement.size()==0;
+            return stackElement.isEmpty();
         }
         public static void push(int data){
             stackElement.add(data);
         }
-        public static int pop(){
+        public static void pop(){
             if(isEmpty()){
-                return -1;
+                return;
             }
             int top=stackElement.get(stackElement.size()-1);
             stackElement.remove(stackElement.size()-1);
-            return top;
         }
         public static int peek(){
             if(isEmpty()){
