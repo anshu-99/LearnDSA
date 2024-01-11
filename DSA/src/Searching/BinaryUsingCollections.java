@@ -3,6 +3,7 @@ import java.util.*;
 public class BinaryUsingCollections {
     public static void main(String[] args) {
         int[] arr={12,23,43,55,65,11,21,32,46};
+//        int[] arr1={22,23,43,55,65,11,21,32,46};
         Scanner sc= new Scanner(System.in);
         Arrays.sort(arr);
         System.out.println("enter element to search");
