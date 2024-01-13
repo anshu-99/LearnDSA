@@ -1,5 +1,7 @@
 package Sorting;
 
+import java.util.Scanner;
+
 public class QuickSort {
     public static int partition(int[] arr, int low, int high){
         int pivot=arr[high];
@@ -31,8 +33,14 @@ public class QuickSort {
         }
     }
     public static void main(String[] args) {
-        int[] arr={54,43,56,67,76,44,21,12,53,34};
-        int n=arr.length;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter size");
+        int n=sc.nextInt();
+        int[] arr=new int[n];
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+//        int n=arr.length;
         System.out.print("Unsorted Array: ");
         printArray(arr);
         System.out.println();
